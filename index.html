@@ -12,21 +12,23 @@
       color: #1a1a1a;
     }
 
-    /* Banner fijo */
-    .banner {
+    /* Banner completo sin superposición */
+    .banner-wrapper {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 999;
-      height: 160px;
-      background: url('Banner.png') no-repeat center center;
-      background-size: cover;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-    /* Separación del contenido con el banner */
+    .banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Compensa el alto del banner para empujar el contenido hacia abajo */
     .spacer {
-      height: 160px;
+      margin-top: 250px; /* Ajustá según el alto real del banner */
     }
 
     .container {
@@ -76,7 +78,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    /* Pie de página */
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -87,8 +88,10 @@
 </head>
 <body>
 
-  <!-- Banner fijo -->
-  <div class="banner"></div>
+  <!-- Banner completo -->
+  <div class="banner-wrapper">
+    <img src="Banner.png" alt="Luciano Flores Banner" class="banner-img">
+  </div>
   <div class="spacer"></div>
 
   <main class="container">
