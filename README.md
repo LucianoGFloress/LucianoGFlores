@@ -1,6 +1,6 @@
 # 👋 ¡Hola! Soy Luciano Flores
 
-🎓 **Analista de datos en formación** | 📍 Argentina  
+🎓 **Analista de datos** | 📍 Argentina  
 📈 Apasionado por transformar datos en soluciones prácticas que mejoren procesos y decisiones.  
 🤝 Colaborador entusiasta, comunicador eficaz y con un fuerte compromiso con el aprendizaje continuo.
 
