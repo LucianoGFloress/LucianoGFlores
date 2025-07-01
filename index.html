@@ -8,27 +8,8 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #e6f0ff; /* azul muy suave */
+      background: #e6f0ff;
       color: #1a1a1a;
-    }
-
-    /* Banner completo sin superposición */
-    .banner-wrapper {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 999;
-    }
-
-    .banner-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Compensa el alto del banner para empujar el contenido hacia abajo */
-    .spacer {
-      margin-top: 250px; /* Ajustá según el alto real del banner */
     }
 
     .container {
@@ -71,11 +52,40 @@
       text-decoration: none;
     }
 
+    /* Mosaico de proyectos */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
     .project {
       background: #ffffffcc;
       padding: 1rem;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .project a {
+      color: #0044cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project a.button {
+      display: inline-block;
+      background-color: #0044cc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 0.5rem;
     }
 
     footer {
@@ -88,20 +98,15 @@
 </head>
 <body>
 
-  <!-- Banner completo -->
-  <div class="banner-wrapper">
-    <img src="Banner.png" alt="Luciano Flores Banner" class="banner-img">
-  </div>
-  <div class="spacer"></div>
+  <!-- Banner decorativo -->
+  <img src="Banner.png" alt="Luciano Flores Banner" style="width: 100%; height: auto; display: block; margin-bottom: 2rem;">
 
   <main class="container">
 
     <!-- SOBRE MÍ -->
     <section class="section">
       <h2>🧠 Sobre mí</h2>
-      <p> Analista de Datos de Argentina, con experiencia en procesos de data entry, limpieza, transformación y análisis de datos (ETL). Tengo experiencia tanto en el ámbito profesional como en proyectos personales. Logré una mejora del 20 % en la eficiencia de un sistema de bases de datos en Excel, utilizado para gestionar información de pacientes, médicos y cirugías en el área de traumatología de un hospital público. Esta mejora permitió ordenar registros clave y facilitar el acceso a datos críticos.
-Además, en mi emprendimiento propio de remolques, desarrollé un sistema en Excel para controlar ingresos, gastos y viajes, junto con un simulador de presupuestos que facilitó la planificación de viajes y tarifas, logrando una mejora notable en la gestión del negocio.
-Me destaco por mi compromiso, atención al detalle y enfoque práctico. Mi objetivo es aportar soluciones claras basadas en datos reales y accesibles.</p>
+      <p>Soy Luciano, vivo en Argentina y me estoy formando como analista de datos. Aplico mis conocimientos en proyectos reales con herramientas como Excel, SQL y Power BI. Me encanta encontrar soluciones prácticas, comunicar ideas y colaborar en equipo.</p>
     </section>
 
     <!-- HERRAMIENTAS -->
@@ -121,15 +126,28 @@ Me destaco por mi compromiso, atención al detalle y enfoque práctico. Mi objet
     <section class="section">
       <h2>📌 Proyectos destacados</h2>
 
-      <div class="project">
-        <h3>🧼 Limpieza de datos con Excel</h3>
-        <p><strong>Antes:</strong> Dataset desordenado, duplicados y errores de formato.</p>
-        <img src="captura-antes.PNG" alt="Antes - datos sin limpiar" style="width:100%; max-width:600px; border-radius:8px; margin: 1rem 0;">
-        <p><strong>Después:</strong> Datos depurados y listos para análisis gracias a funciones como BUSCARV, SI y validación.</p>
-        <img src="captura-despues.PNG" alt="Después - datos limpios" style="width:100%; max-width:600px; border-radius:8px; margin: 1rem 0;">
-        <p><a href="proyecto-limpieza.xlsx" download>📥 Descargar Excel</a></p>
-      </div>
+      <div class="projects-grid">
 
+        <!-- Proyecto 1 -->
+        <div class="project">
+          <h3>🧼 Limpieza de datos con Excel</h3>
+          <p>Transformación de un dataset con errores y datos duplicados en un conjunto listo para análisis.</p>
+          <img src="captura-antes.png" alt="Antes - datos sin limpiar">
+          <img src="captura-despues.png" alt="Después - datos limpios">
+          <a href="proyecto-limpieza.xlsx" download class="button">📥 Descargar Excel</a>
+        </div>
+
+        <!-- Proyecto 2 -->
+  <div class="project">
+  <h3>🏥 Análisis de traumatología en hospital público</h3>
+  <p>Transformé una planilla manual con datos de pacientes, cirugías y obras sociales en un sistema automatizado con resúmenes claros mensuales mediante tablas dinámicas en Excel.</p>
+  <img src="Volumen-pacientes-original.PNG" alt="Antes - hoja desorganizada">
+  <img src="Volumen-pacientes-final.PNG" alt="Después - resumen automatizado">
+  <a href="https://github.com/LucianoGFloress/volumen-pacientes-traumatologia-excel" class="button">🔗 Ver repositorio en GitHub</a>
+</div>
+
+
+      </div>
     </section>
 
     <!-- CONTACTO -->
